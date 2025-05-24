@@ -159,11 +159,11 @@
         <item name="android:windowBackground">@color/gray_600</item>
     </style>
 
-    <style name="Theme.LinphoneInCallPink" parent="Theme.LinphonePink">
+    <style name="Theme.LyriaTelecomInCallPink" parent="Theme.LyriaTelecomPink">
         <item name="android:windowBackground">@color/gray_600</item>
     </style>
 
-    <style name="Theme.LinphoneInCallPurple" parent="Theme.LinphonePurple">
+    <style name="Theme.LyriaTelecomInCallPurple" parent="Theme.LyriaTelecomPurple">
         <item name="android:windowBackground">@color/gray_600</item>
     </style>
 
