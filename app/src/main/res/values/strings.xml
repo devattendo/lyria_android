@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
 <!DOCTYPE resources [
-    <!ENTITY appName "Linphone">
+    <!ENTITY appName "Lyria Telecom">
 ]>
 
 <resources>
@@ -30,13 +30,13 @@
     <string name="help_about_open_source_licenses_subtitle" translatable="false">© Belledonne Communications 2010-2024</string>
     <string name="help_advanced_send_debug_logs_email_address" translatable="false">linphone-android@belledonne-communications.com</string>
 
-    <string name="website_contact_url" translatable="false">https://linphone.org/contact</string>
-    <string name="website_download_url" translatable="false">https://linphone.org/linphone-softphone</string>
-    <string name="website_privacy_policy_url" translatable="false">https://linphone.org/en/privacy-policy</string>
-    <string name="website_terms_and_conditions_url" translatable="false">https://www.linphone.org/en/terms-of-use</string>
-    <string name="web_platform_register_email_url" translatable="false">https://subscribe.linphone.org/register/email</string>
-    <string name="web_platform_forgotten_password_url" translatable="false">https://subscribe.linphone.org/</string>
-    <string name="website_translate_weblate_url" translatable="false">https://weblate.linphone.org/</string>
+    <string name="website_contact_url" translatable="false">https://lyria.es/contacto</string>
+    <string name="website_download_url" translatable="false">https://lyria.es/descarga</string>
+    <string name="website_privacy_policy_url" translatable="false">https://lyria.es/politica-privacidad</string>
+    <string name="website_terms_and_conditions_url" translatable="false">https://lyria.es/aviso-legal</string>
+    <string name="web_platform_register_email_url" translatable="false">https://lyria.es/contacto</string>
+    <string name="web_platform_forgotten_password_url" translatable="false">https://subscribe.lyria.es/</string>
+    <string name="website_translate_weblate_url" translatable="false"></string>
     <string name="website_open_source_licences_usage_url" translatable="false">https://wiki.linphone.org/xwiki/wiki/public/view/Linphone/Third%20party%20components%20/#Hlinphone-android</string>
     <string name="conversation_end_to_end_encrypted_bottom_sheet_link" translatable="false"><u>https://linphone.org/en/features/#security</u></string>
 
@@ -52,7 +52,7 @@
     <string name="password">Password</string>
     <string name="phone_number">Phone number</string>
     <string name="or">or</string>
-    <string name="next">Next</string>
+    <string name="next">Siguiente</string>
     <string name="start">Start</string>
     <string name="today">Today</string>
     <string name="yesterday">Yesterday</string>
@@ -113,11 +113,12 @@
     <!-- First screens user see when app is installed and started -->
     <string name="welcome_page_title">Welcome</string>
     <string name="welcome_page_subtitle">in &appName;</string>
-    <string name="welcome_page_1_message">A <b>secured</b>, <b>open source</b> and <b>French</b> communication app.</string>
+    <string name="welcome_page_1_message">La operadora VoIP 100% para empresas</string>
     <string name="welcome_page_2_title">Secured</string>
     <string name="welcome_page_2_message">Your communications are safe thanks to our <b>end-to-end encryption</b>.</string>
     <string name="welcome_page_3_title">Open source</string>
     <string name="welcome_page_3_message">A <b>free</b> and open source application since <b>2001</b>.</string>
+    <string name="welcome_main_title">Lyria PBX App</string>
 
     <!-- Generic toasts -->
     <string name="sip_address_copied_to_clipboard_toast">SIP address copied into clipboard</string>
@@ -165,14 +166,14 @@
     <string name="assistant_account_register_unexpected_error">Unexpected error occurred, please try again later</string>
     <string name="assistant_account_login_forbidden_error">Wrong username or password</string>
     <string name="assistant_account_login_error">Failed to login: error code is %s</string>
-    <string name="assistant_permissions_title">Grant permissions</string>
-    <string name="assistant_permissions_grant_all_of_them">OK</string>
+    <string name="assistant_permissions_title">Permisos requeridos</string>
+    <string name="assistant_permissions_grant_all_of_them">De acuerdo</string>
     <string name="assistant_permissions_skip_permissions">Do it later</string>
-    <string name="assistant_permissions_subtitle">To fully enjoy &appName; we need you to grant us the following permissions :</string>
-    <string name="assistant_permissions_read_contacts_title"><b>Read contacts:</b> To display your contacts and find whom is using &appName;.</string>
-    <string name="assistant_permissions_post_notifications_title"><b>Post notifications:</b> To be informed when you receive a message or a call.</string>
-    <string name="assistant_permissions_record_audio_title"><b>Record audio:</b> So your correspondent can hear you and to record voice messages.</string>
-    <string name="assistant_permissions_access_camera_title"><b>Access camera:</b> To capture video during video calls and conferences.</string>
+    <string name="assistant_permissions_subtitle">Para garantizar el buen funcionamiento de Lyria PBX App, requerimos los permisos siguientes:</string>
+    <string name="assistant_permissions_read_contacts_title"><b>Leer tus contactos:</b> acceso a tus contactos.</string>
+    <string name="assistant_permissions_post_notifications_title"><b>Notificaciones push:</b> Aviso al recibir mensajes o llamadas.</string>
+    <string name="assistant_permissions_record_audio_title"><b>Grabar audio:</b> Para grabar tus mensajes de voz.</string>
+    <string name="assistant_permissions_access_camera_title"><b>Acceder a la cámara:</b> para realizar videollamadas.</string>
 
     <!-- Main navigation items -->
     <string name="bottom_navigation_contacts_label">Contacts</string>
