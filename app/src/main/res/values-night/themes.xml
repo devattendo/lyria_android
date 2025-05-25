@@ -2,11 +2,11 @@
     <style name="AppSplashScreenTheme" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/background_color_alt_dark_mode</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/linphone_splashscreen</item>
-        <item name="postSplashScreenTheme">@style/Theme.Linphone</item>
+        <item name="postSplashScreenTheme">@style/Theme.LyriaTelecom</item>
     </style>
 
     <!-- Base application theme. -->
-    <style name="Theme.Linphone" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.LyriaTelecom" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <!-- Customize your theme here. -->
         <item name="android:windowActivityTransitions">true</item>
@@ -62,7 +62,7 @@
         <item name="color_avatar_text">@color/gray_main2_200</item>
 
         <item name="color_chat_bubble_incoming">@color/background_color_alt_dark_mode</item>
-        <item name="color_chat_bubble_outgoing">@color/gray_main2_700</item>
+        <item name="color_chat_bubble_outgoing">@color/orange_main_300</item>
         <item name="color_chat_bubble_reply">@color/gray_500</item>
         <item name="color_chat_bubble_file">@color/gray_main2_800</item>
 
@@ -83,57 +83,57 @@
         <item name="color_bottom_sheet_background">@color/background_color_alt_dark_mode</item>
     </style>
 
-    <style name="Theme.LinphoneYellow" parent="Theme.Linphone">
+    <style name="Theme.LyriaTelecomYellow" parent="Theme.LyriaTelecom">
         <item name="color_main1_100">@color/yellow_main_100</item>
         <item name="color_main1_100_alpha_50">@color/yellow_main_100_alpha_50</item>
         <item name="color_main1_300">@color/yellow_main_300</item>
         <item name="color_main1_500">@color/yellow_main_500</item>
         <item name="color_main1_700">@color/yellow_main_700</item>
-        <item name="color_chat_bubble_outgoing">@color/gray_main2_700</item>
+        <item name="color_chat_bubble_outgoing">@color/yellow_main_300</item>
     </style>
 
-    <style name="Theme.LinphoneGreen" parent="Theme.Linphone">
+    <style name="Theme.LyriaTelecomGreen" parent="Theme.LyriaTelecom">
         <item name="color_main1_100">@color/green_main_100</item>
         <item name="color_main1_100_alpha_50">@color/green_main_100_alpha_50</item>
         <item name="color_main1_300">@color/green_main_300</item>
         <item name="color_main1_500">@color/green_main_500</item>
         <item name="color_main1_700">@color/green_main_700</item>
-        <item name="color_chat_bubble_outgoing">@color/gray_main2_700</item>
+        <item name="color_chat_bubble_outgoing">@color/green_main_300</item>
     </style>
 
-    <style name="Theme.LinphoneBlue" parent="Theme.Linphone">
+    <style name="Theme.LyriaTelecomBlue" parent="Theme.LyriaTelecom">
         <item name="color_main1_100">@color/blue_main_100</item>
         <item name="color_main1_100_alpha_50">@color/blue_main_100_alpha_50</item>
         <item name="color_main1_300">@color/blue_main_300</item>
         <item name="color_main1_500">@color/blue_main_500</item>
         <item name="color_main1_700">@color/blue_main_700</item>
-        <item name="color_chat_bubble_outgoing">@color/gray_main2_700</item>
+        <item name="color_chat_bubble_outgoing">@color/blue_main_300</item>
     </style>
 
-    <style name="Theme.LinphoneRed" parent="Theme.Linphone">
+    <style name="Theme.LyriaTelecomRed" parent="Theme.LyriaTelecom">
         <item name="color_main1_100">@color/red_main_100</item>
         <item name="color_main1_100_alpha_50">@color/red_main_100_alpha_50</item>
         <item name="color_main1_300">@color/red_main_300</item>
         <item name="color_main1_500">@color/red_main_500</item>
         <item name="color_main1_700">@color/red_main_700</item>
-        <item name="color_chat_bubble_outgoing">@color/gray_main2_700</item>
+        <item name="color_chat_bubble_outgoing">@color/red_main_300</item>
     </style>
 
-    <style name="Theme.LinphonePink" parent="Theme.Linphone">
+    <style name="Theme.LyriaTelecomPink" parent="Theme.LyriaTelecom">
         <item name="color_main1_100">@color/pink_main_100</item>
         <item name="color_main1_100_alpha_50">@color/pink_main_100_alpha_50</item>
         <item name="color_main1_300">@color/pink_main_300</item>
         <item name="color_main1_500">@color/pink_main_500</item>
         <item name="color_main1_700">@color/pink_main_700</item>
-        <item name="color_chat_bubble_outgoing">@color/gray_main2_700</item>
+        <item name="color_chat_bubble_outgoing">@color/pink_main_300</item>
     </style>
 
-    <style name="Theme.LinphonePurple" parent="Theme.Linphone">
+    <style name="Theme.LyriaTelecomPurple" parent="Theme.LyriaTelecom">
         <item name="color_main1_100">@color/purple_main_100</item>
         <item name="color_main1_100_alpha_50">@color/purple_main_100_alpha_50</item>
         <item name="color_main1_300">@color/purple_main_300</item>
         <item name="color_main1_500">@color/purple_main_500</item>
         <item name="color_main1_700">@color/purple_main_700</item>
-        <item name="color_chat_bubble_outgoing">@color/gray_main2_700</item>
+        <item name="color_chat_bubble_outgoing">@color/purple_main_300</item>
     </style>
 </resources>
