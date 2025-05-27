@@ -33,7 +33,6 @@ import androidx.core.view.updatePadding
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import kotlin.math.max
-import org.linphone.LinphoneApplication.Companion.coreContext
 import org.linphone.R
 import org.linphone.compatibility.Compatibility
 import org.linphone.core.tools.Log
@@ -71,14 +70,15 @@ class AssistantActivity : GenericActivity() {
             WindowInsetsCompat.CONSUMED
         }
 
-        coreContext.postOnCoreThread { core ->
-            if (core.accountList.isEmpty()) {
-                Log.i("$TAG No account configured, disabling back gesture")
-                coreContext.postOnMainThread {
-                    // Disable back gesture / button
-                    onBackPressedDispatcher.addCallback { }
-                }
+        // Desactivar completamente el botón atrás y gestos para evitar que el usuario
+        // navegue hacia pantallas anteriores en el flujo de asistente
+        onBackPressedDispatcher.addCallback {
+            // Si el usuario está en la pantalla de configuración SIP, terminar la actividad
+            val navController = binding.assistantNavContainer.findNavController()
+            if (navController.currentDestination?.id == R.id.thirdPartySipAccountLoginFragment) {
+                finish()
             }
+            // De lo contrario, simplemente no hacer nada (deshabilitar el botón atrás)
         }
 
         (binding.root as? ViewGroup)?.doOnPreDraw {
@@ -86,21 +86,16 @@ class AssistantActivity : GenericActivity() {
                 Log.w("$TAG Not all required permissions are granted, showing Permissions fragment")
                 val action = PermissionsFragmentDirections.actionGlobalPermissionsFragment()
                 binding.assistantNavContainer.findNavController().navigate(action)
-            } else if (intent.getBooleanExtra(SKIP_LANDING_EXTRA, false)) {
-                Log.w(
-                    "$TAG We were asked to leave assistant if at least an account is already configured"
-                )
-                coreContext.postOnCoreThread { core ->
-                    if (core.accountList.isNotEmpty()) {
-                        coreContext.postOnMainThread {
-                            try {
-                                Log.w("$TAG At least one account was found, leaving assistant")
-                                finish()
-                            } catch (ise: IllegalStateException) {
-                                Log.e("$TAG Can't finish activity: $ise")
-                            }
-                        }
-                    }
+            } else {
+                // Ir directamente a la pantalla de configuración SIP sin pasar por pantallas intermedias
+                Log.i("$TAG Navegando directamente a la pantalla de configuración SIP")
+                val navController = binding.assistantNavContainer.findNavController()
+                
+                // Si el destino actual es el landing o la pantalla de inicio, ir directamente a la configuración SIP
+                if (navController.currentDestination?.id == R.id.landingFragment) {
+                    val action = org.linphone.ui.assistant.fragment.LandingFragmentDirections
+                        .actionLandingFragmentToThirdPartySipAccountLoginFragment()
+                    navController.navigate(action)
                 }
             }
         }

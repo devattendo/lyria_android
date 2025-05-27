@@ -95,7 +95,8 @@ class ThirdPartySipAccountLoginFragment : GenericFragment() {
         observeToastEvents(viewModel)
 
         binding.setBackClickListener {
-            goBack()
+            // En lugar de ir hacia atrás (a la pantalla de login), cerrar la aplicación
+            requireActivity().finish()
         }
 
         viewModel.showPassword.observe(viewLifecycleOwner) {

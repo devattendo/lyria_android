@@ -152,17 +152,11 @@ class ThirdPartySipAccountLoginViewModel
         availableTransports.add(TransportType.Tls.name.uppercase(Locale.getDefault()))
 
         coreContext.postOnCoreThread {
-            domain.postValue(corePreferences.thirdPartySipAccountDefaultDomain)
+            // Preestablecer el dominio a [tu_pbx].lyria.tel:7060
+            domain.postValue("[tu_pbx].lyria.tel:7060")
 
-            val defaultTransport = corePreferences.thirdPartySipAccountDefaultTransport.uppercase(
-                Locale.getDefault()
-            )
-            val index = if (defaultTransport.isNotEmpty()) {
-                availableTransports.indexOf(defaultTransport)
-            } else {
-                availableTransports.size - 1
-            }
-            defaultTransportIndexEvent.postValue(Event(index))
+            // Establecer el transporte a UDP (índice 0 en la lista de transportes)
+            defaultTransportIndexEvent.postValue(Event(0))
         }
     }
 
